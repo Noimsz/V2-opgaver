@@ -87,10 +87,6 @@ nav .menu-btn ~ .closeicon
     display: none;
 }
 
-ul:checked {
-    
-}
-
 .menu-btn:checked ~ ul {
     display: inline-flex;
     flex-direction: column;
@@ -101,6 +97,14 @@ ul:checked {
     right: 0;
     background-color: hsla(0, 0%, 50%);
 
+}
+
+.menu-btn:checked ~ .menuicon {
+    display: none;
+}
+
+.menu-btn:checked ~ .closeicon {
+    display: block;
 }
 
 a {
