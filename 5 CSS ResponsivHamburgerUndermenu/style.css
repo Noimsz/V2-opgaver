@@ -85,7 +85,7 @@ nav .menu-btn
     display: block;
     width: 40px;
     z-index: 7;
-    opacity: 0;
+    opacity: 0.5;
     cursor: pointer;
 }
 
@@ -105,6 +105,44 @@ nav .menu-btn ~ .menuicon
 nav .menu-btn ~ .closeicon
 {
     display: none;
+}
+
+nav .menu-btn:checked ~ .menuicon 
+{
+    display: none;
+}
+
+nav .menu-btn:checked ~ .closeicon
+{
+    display: block;
+}
+
+nav .menu-btn:checked ~ ul
+{
+    display: inline-block;
+    flex-direction: column;
+    align-items: flex-end;
+    width: auto;
+    position: absolute;
+    right: 0;
+    padding-top: 50px;
+    background-color: hsl(0, 0%, 50%);
+}
+
+h2
+{
+    display: inline-block;
+}
+
+li img 
+{
+    height: 28px;
+    width: 28px;
+}
+
+li .submenu-btn:checked ~ ul
+{
+    display: block;
 }
 
 /* Pil nederst i højre hjørne, som altid kan føre brugeren til toppen. Dette styler den hvide cirkel bag pilen */
