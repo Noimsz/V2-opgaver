@@ -85,7 +85,7 @@ nav .menu-btn
     display: block;
     width: 40px;
     z-index: 7;
-    opacity: 0.5;
+    opacity: 0;
     cursor: pointer;
 }
 
@@ -136,14 +136,36 @@ h2
 
 li img 
 {
+    position: relative;
+    top: 4px;
+    right: 10px;
     height: 28px;
     width: 28px;
+    transform: rotate(90deg);
+    transition: all 150ms;
+}
+
+ul .submenu-btn:checked ~ img
+{
+    transform: rotate(0deg);
 }
 
 li .submenu-btn:checked ~ ul
 {
     display: block;
 }
+
+.submenu-btn
+{
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    height: 50px;
+    width: 100%;
+   opacity: 0;
+}
+
+
 
 /* Pil nederst i højre hjørne, som altid kan føre brugeren til toppen. Dette styler den hvide cirkel bag pilen */
 main>span
